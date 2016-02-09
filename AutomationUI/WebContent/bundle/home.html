@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automation</title>
+    <link rel="stylesheet" href="automation/css/bootstrap.min.css">
+    <link rel="stylesheet" href="automation/css/angular-ui-tree.min.css">
+	<link rel="stylesheet" href="automation/css/ngDialog.min.css">
+	<link rel="stylesheet" href="automation/css/ngDialog-theme-default.css">	
+	<link rel="stylesheet" href="automation/css/automation.css">
+	
+</head>
+<body ng-app="main">
+
+ <div header></div>
+    <!-- Note that AngularJS 1.2+ now has a built-in ng-animation direction. Left in animated-view to show a 
+         custom directive -->
+<div ng-view>
+  </div>
+    
+ 
+
+    <div footer></div>
+
+    <!-- Vendor Libs: jQuery only used for Bootstrap functionality -->
+	<script src="automation/js/angular-1.3.13/angular.min.js"></script>
+	<script src="automation/js/angular-1.3.13/angular-route.js"></script>
+    <script src="automation/js/jquery-1.9.1.min.js"></script>
+	<script src="automation/js/ui/angular-ui.min.js"></script>
+	<script src="automation/js/ui/jquery-ui.min.js"></script>
+	<!-- <script src="automation/js/angular-ui-tree.min.js"></script> -->
+	<script type="text/javascript" src="automation/js/tree/angular-ui-tree.js"></script>
+    <script src="automation/js/bootstrap.min.js"></script>
+	<script src="automation/js/ngDialog.min.js"></script>
+	<script src="automation/js/ng-table.js"></script>
+	<script src="automation/js/dirPagination.js"></script>
+	
+    <!-- App libs -->
+    <script src="automation/homeapp.js"></script>
+    <script src="automation/app/controller/homeheadercontroller.js"></script>
+    
+	<!-- <script src="appTree.js"></script> -->
+	<script src="automation/js/ui-bootstrap-tpls-0.13.0.min.js"></script>
+</body>
+</html>

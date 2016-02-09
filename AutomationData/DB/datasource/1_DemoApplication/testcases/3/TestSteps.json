@@ -1,0 +1,148 @@
+{
+  "testSteps": [
+    {
+      "screenId": 1,
+      "screenName": "Generic",
+      "controlId": 1.1,
+      "controlName": "Generic",
+      "objProp":"",
+      "testStepNumber": 1,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC01",
+      "action": {
+        "id": 1,
+        "text": "ActivateWindow"
+      },
+      "dataSet": "bldoc.png"
+    },
+    {
+      "screenId": 1,
+      "screenName": "MSWORD",
+      "controlId": 1.1,
+      "controlName": "bldoc",
+      "objProp":"bldoc.png",
+      "testStepNumber": 2,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC01",
+      "action": {
+        "id": 1,
+        "text": "Click"
+      },
+      "dataSet": ""
+    },
+     {
+      "screenId": 1,
+      "screenName": "Generic",
+      "controlId": 1.2,
+      "controlName": "Generic",
+      "objProp":"",
+      "testStepNumber": 3,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC02",
+      "action": {
+        "id": 1,
+        "text": "ClickOnRegion"
+      },
+      "dataSet": "129,25,10,10"
+    },
+     {
+      "screenId": 1,
+      "screenName": "Generic",
+      "controlId": 1.2,
+      "controlName": "Generic",
+      "objProp":"",
+      "testStepNumber": 4,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC02",
+      "action": {
+        "id": 1,
+        "text": "ClickOnRegion"
+      },
+      "dataSet": "403,93,20,20"
+    },
+    {
+      "screenId": 1,
+      "screenName": "MSWORD",
+      "controlId": 1.2,
+      "controlName": "nativy",
+      "objProp":"nativy.png",
+      "testStepNumber": 5,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC02",
+      "action": {
+        "id": 1,
+        "text": "DoubleClick"
+      },
+      "dataSet": ""
+    },
+    {
+      "screenId": 1,
+      "screenName": "Generic",
+      "controlId": 1.2,
+      "controlName": "Generic",
+      "objProp":"",
+      "testStepNumber": 6,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC02",
+      "action": {
+        "id": 1,
+        "text": "SetTextOnRegion"
+      },
+      "dataSet": "188,260,5,5->Life is Beautiful"
+    },
+    {
+      "screenId": 1,
+      "screenName": "MSWORD",
+      "controlId": 1.2,
+      "controlName": "Target Language",
+      "objProp":"german.png",
+      "testStepNumber": 7,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC02",
+      "action": {
+        "id": 1,
+        "text": "VerifyControlExists"
+      },
+      "dataSet": ""
+    },
+    {
+      "screenId": 1,
+      "screenName": "MSWORD",
+      "controlId": 1.2,
+      "controlName": "Next",
+      "objProp":"next.png",
+      "testStepNumber": 8,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC02",
+      "action": {
+        "id": 1,
+        "text": "Click"
+      },
+      "dataSet": ""
+    },
+     {
+      "screenId": 1,
+      "screenName": "MSWORD",
+      "controlId": 1.2,
+      "controlName": "Result",
+      "objProp":"firstresult.png",
+      "testStepNumber": 9,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC02",
+      "action": {
+        "id": 1,
+        "text": "VerifyControlExists"
+      },
+      "dataSet": ""
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<script type="text/ng-template" id="testRunDialog">
+	<div class="ngdialog-message">
+		<div>
+			<h3 class="page-header">New Test Run</h3>
+			<form name="myForm" ng-controller="TestRunCtrl">
+				<label>Name: <input type="text" ng-model="testRunName" name="testRunName" ngRequired="true" ngMinlength=5 ngMaxlength=15 ng-trim=true /></label>
+				<button type="button" class="btn btn-primary btn-xs" ng-click="addTestRun()">Save Test Run</button>
+			</form>
+		</div>
+	</div>
+</script>
+
+<div class="container" ng-controller="TestRunCtrl" ng-init="init()">	
+	<div class="form-group has-feedback">
+  		<button ng-click="newTestRun()" class="btn btn-primary btn-xs pull-right">Add TestRun</button>
+  		<label class="control-label" for="inputValidation">Filter</label>
+        <input type="text" class="form-control" id="inputValidation" placeholder="Search By Test Run Id or Name" ng-model="query">
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+	</div>
+
+ <div class="alert alert-success" ng-show="showSuccessMsg"> {{successMsg}}</div>
+ <div class="alert alert-danger" ng-show="showErrorMsg"> {{errorMsg}}</div>
+ 
+	<table class="table table-responsive">
+		<thead>
+			<tr class="bg-primary"><td>#</td><td>Name</td><td>Application</td><td>Updated By</td><td>Updated Date</td><td>Actions</td></tr>
+		</thead>
+        <tbody><tr dir-paginate="testRun in data | filter : query| itemsPerPage : 9 ">
+			<td data-title="'#'">
+				<span>{{testRun.testRunId}}</span>
+            </td>
+            <td data-title="'Name'">
+                <span ng-if="!testRun.$edit"><a ng-href="#/testRun/{{testRun.testRunId}}">{{testRun.testRunName}}</a></span>
+                <div ng-if="testRun.$edit"><input class="form-control" type="text" ng-model="testRun.testRunName" /></div>
+            </td>
+            <td data-title="'ApplicationName'">
+                <span>{{testRun.applicationName}}</span>
+            </td>
+			<td data-title="'Created By'">
+                <span>{{testRun.createdBy}}</span>
+            </td>
+            <td data-title="'Created Date'">
+                <span>{{testRun.createdDate | date: 'MM/dd/yyyy'}}</span>
+            </td>
+            <td data-title="'Actions'" width="200">
+                <a ng-if="!testRun.$edit" href="" class="btn btn-default btn-xs" ng-click="testRun.$edit = true">Edit</a>
+                <a ng-if="testRun.$edit" href="" class="btn btn-primary btn-xs" ng-click="updateTestRun(testRun)">Save</a>
+			    <button class="btn btn-primary btn-xs" confirmation-needed="Do you really want to delete?" confirmed-click="removeTestRun(testRun)">Delete</button>
+            </td>
+        </tr></tbody>
+    </table>
+    
+    <dir-pagination-controls></dir-pagination-controls>
+</div>

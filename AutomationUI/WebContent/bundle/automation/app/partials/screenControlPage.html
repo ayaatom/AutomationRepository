@@ -1,0 +1,79 @@
+				<script type="text/ng-template" id="items_renderer.html">
+    <div ui-tree-handle data-nodrag  class="tree-node">
+      <div class="tree-node-content">
+        <a ng-if="treeNode.type === 'SCREEN'" class="btn btn-success btn-xs" data-nodrag ng-click="screenToggle(treeNode);toggle(this)">
+<span class="glyphicon" ng-class="{'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed}"></span></a>
+
+<span ng-if="!treeNode.$edit">{{treeNode.title}}</span>
+
+<span ng-if="!treeNode.$edit">{{treeNode.objProp}}</span>
+
+<a ng-if="!treeNode.$edit" href="" class="pull-right btn btn-default btn-xs" data-nodrag ng-click="editTreeNode(treeNode)">Edit</a>
+        <a ng-if="treeNode.$edit" href="" class="pull-right btn btn-primary btn-xs" data-nodrag ng-click="treeNode.$edit = false">Save</a>
+        <a class="pull-right btn btn-danger btn-xs" data-nodrag ng-click="removeTreeNode(treeNode,this)">
+			<span class="glyphicon glyphicon-remove"></span>
+		</a>
+        <a ng-if="treeNode.type === 'SCREEN'" class="pull-right btn btn-primary btn-xs" data-nodrag ng-click="newSubItem(treeNode)" style="margin-right: 8px;">
+		<span class="glyphicon glyphicon-plus"></span></a>
+      </div>
+    </div>
+    <ol ui-tree-nodes="" ng-model="treeNode.nodes" ng-class="{hidden: collapsed}" style="list-style-type: none;">
+      <li ng-repeat="treeNode in treeNode.nodes | filter:query" data-collapsed="true" ui-tree-node ng-include="'items_renderer.html'">
+      </li>
+    </ol>
+  </script>
+  
+  <script type="text/ng-template" id="treeNodeFormDialog">
+	<div class="ngdialog-message">
+		<div>
+			<h3 class="page-header">Update Screen Control</h3>
+			<form name="myForm" ng-controller="ScreenControlCtrl">
+				<label>Title:<input type="text" ng-model="ngDialogData.title" ngRequired="true" ng-trim="true" /></label>
+				<label>Object Prop:<input type='text'  ng-model='ngDialogData.objProp' ng-trim="true" /></label>
+				<div ng-if="ngDialogData.type != 'SCREEN'">
+				<label>Object Type:
+						<select name="objectTypeCombo" ng-selected="{{screenCtrlType.id == ngDialogData.objPropType}}" 
+				ng-model="ngDialogData.objPropType" required="Select Object Type" 
+				ng-options=" screenCtrlType.id as screenCtrlType.name for screenCtrlType in screenCtrlTypes">      						
+   						</select>
+				</label>
+				</div>
+				<button type="button" class="btn btn-primary btn-xs" ng-click="saveTreeNode(ngDialogData)">Save Screen Control</button>
+			</form>
+		</div>
+	</div>
+</script>
+
+
+<div class="container" ng-controller="ScreenControlCtrl"
+	ng-init="init()">
+	<div class="form-group has-feedback">
+		<label class="control-label" for="inputValidation">Filter </label> <input
+			type="text" class="form-control" id="testStepFilter"
+			placeholder="Search By Screen Control Attributes" ng-model="query">
+		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+	</div>
+	<div class="row">
+		<div class="form-group has-feedback">
+			<!-- <button ng-click="saveScreenControl()"
+				class="btn btn-primary btn-xs pull-right">Save/Update
+				Screen</button> -->
+			<button ng-click="newScreen()"
+				class="btn btn-primary btn-xs pull-right">Add Screen</button>
+			<h3>Screen Control</h3>
+		</div>
+ <div class="alert alert-success" ng-show="showSuccessMsg"> {{successMsg}}</div>
+ <div class="alert alert-danger" ng-show="showErrorMsg"> {{errorMsg}}</div>
+		<div class="col-md-12">
+			<div class="row">
+				<div ui-tree id="tree1-root">
+					<ol ui-tree-nodes="" ng-model="screenCtrlTreedata"
+						style="list-style-type: none;">
+						<li data-collapsed="true" ng-repeat="treeNode in screenCtrlTreedata  | filter:query"
+							ui-tree-node ng-include="'items_renderer.html'"></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

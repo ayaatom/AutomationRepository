@@ -1,0 +1,128 @@
+{
+  "testSteps": [
+    {
+      "controlId": 113,
+      "controlName": "LoginByEmail",
+      "objProp": "id->logInByEmailBtn",
+      "screenId": 11,
+      "screenName": "SnapDealHome",
+      "testStepNumber": 1,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC181",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      }
+    },
+    {
+      "controlId": 113,
+      "controlName": "LoginByEmail",
+      "objProp": "id->logInByEmailBtn",
+      "screenId": 11,
+      "screenName": "SnapDealHome",
+      "testStepNumber": 2,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC181",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 114,
+      "controlName": "Email",
+      "objProp": "id->j_username",
+      "screenId": 11,
+      "screenName": "SnapDealHome",
+      "testStepNumber": 3,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC181",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      },
+      "dataSet": ""
+    },
+    {
+      "controlId": 114,
+      "controlName": "Email",
+      "objProp": "id->j_username",
+      "screenId": 11,
+      "screenName": "SnapDealHome",
+      "testStepNumber": 4,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC181",
+      "action": {
+        "id": 1,
+        "text": "Enter Text"
+      },
+      "dataSet": "kannan554@yahoo.com"
+    },
+    {
+      "controlId": 115,
+      "controlName": "Password",
+      "objProp": "id->j_password_login",
+      "screenId": 11,
+      "screenName": "SnapDealHome",
+      "testStepNumber": 5,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC181",
+      "action": {
+        "id": 1,
+        "text": "Enter Text"
+      },
+      "dataSet": "ready2go"
+    },
+    {
+      "controlId": 116,
+      "controlName": "LoginButton",
+      "objProp": "id->signin_submit",
+      "screenId": 11,
+      "screenName": "SnapDealHome",
+      "testStepNumber": 6,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC181",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 117,
+      "controlName": "searchtextbox",
+      "objProp": "xpath->(//input[@name='keyword'][@type='text'])[1]",
+      "screenId": 11,
+      "screenName": "SnapDealHome",
+      "testStepNumber": 7,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC181",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      }
+    },
+    {
+      "controlId": 117,
+      "controlName": "searchtextbox",
+      "objProp": "xpath->(//input[@name='keyword'])[1]",
+      "screenId": 11,
+      "screenName": "SnapDealHome",
+      "testStepNumber": 8,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC181",
+      "action": {
+        "id": 43,
+        "text": "GetProperty"
+      },
+      "dataSet": "placeholder->#placeholder"
+    }
+  ]
+}

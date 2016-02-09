@@ -1,0 +1,256 @@
+﻿[
+  {
+    "id": 1,
+    "text": "Enter Text"
+  },
+  {
+    "id": 2,
+    "text": "Click"
+  },
+  {
+    "id": 3,
+    "text": "Select"
+  },
+  {
+    "id": 4,
+    "text": "GetTextBoxValue"
+  },
+  {
+    "id": 5,
+    "text": "VerifyText"
+  },
+  {
+    "id": 6,
+    "text": "WaitForControl"
+  },
+  {
+    "id": 7,
+    "text": "SwitchToFrame"
+  },
+  {
+    "id": 8,
+    "text": "SwitchToDefaultContent"
+  },
+  {
+    "id": 9,
+    "text": "DoubleClick"
+  },
+  {
+    "id": 10,
+    "text": "ClickOnRegion"
+  },
+  {
+    "id": 11,
+    "text": "SetTextOnRegion"
+  },
+  {
+    "id": 12,
+    "text": "DoubleClickOnRegion"
+  },
+  {
+    "id": 13,
+    "text": "VerifyControlExists"
+  },
+  {
+    "id": 14,
+    "text": "KeyPressAction"
+  },{
+    "id": 15,
+    "text": "SelectValueFromComboBox"
+  }
+,{
+    "id": 16,
+    "text": "SelectValueFromListBox"
+  },
+  {
+    "id": 17,
+    "text": "StoreValue"
+  },
+  {
+    "id": 18,
+    "text": "GenerateRandomNumber"
+  },
+  {
+    "id": 19,
+    "text": "Concatenate"
+  },{
+    "id": 20,
+    "text": "Clear Text"
+  },{
+    "id": 21,
+    "text": "WaitForAjax"
+  },
+  {
+    "id": 22,
+    "text": "Wait"
+  },
+   {
+    "id": 23,
+    "text": "NavigateBack"
+  },
+  {
+    "id": 24,
+    "text": "NavigateForward"
+  },
+  {
+    "id": 25,
+    "text": "Refresh"
+  },
+   {
+    "id": 26,
+    "text": "NavigateTo"
+  },
+   {
+    "id": 27,
+    "text": "GetURL"
+  },
+   {
+    "id": 28,
+    "text": "ScrollWindow"
+  },
+   {
+    "id": 29,
+    "text": "ExecuteJavaScript"
+  },
+  {
+    "id": 30,
+    "text": "MoveMouseToElement"
+  },
+  {
+    "id": 31,
+    "text": "GetRowCount"
+  },
+   {
+    "id": 32,
+    "text": "GetColumnCount"
+  },
+  {
+    "id": 33,
+    "text": "GetCellText"
+  },
+  {
+    "id": 34,
+    "text": "PerformActionOnControlWithinCell"
+  },
+  {
+    "id": 35,
+    "text": "GetRowColumnBasedOnCellText"
+  },
+  {
+    "id": 36,
+    "text": "GetHeaderName"
+  },
+  {
+    "id": 37,
+    "text": "ClickOnLinkBasedOnCellText"
+  },
+  {
+    "id": 38,
+    "text": "Split"
+  },
+  {
+    "id": 39,
+    "text": "SubString"
+  },
+  {
+    "id": 40,
+    "text": "Length"
+  },
+  {
+    "id": 41,
+    "text": "Contains"
+  },
+  {
+    "id": 42,
+    "text": "GetText"
+  },
+  {
+    "id": 43,
+    "text": "GetProperty"
+  },
+  {
+    "id": 44,
+    "text": "GetControlExistStatus"
+  },
+  {
+    "id": 45,
+    "text": "SetAttributeValue"
+  },
+  {
+    "id": 46,
+    "text": "WaitUntilControlIsStale"
+  },
+  {
+    "id": 47,
+    "text": "WaitUntilControlIsClickable"
+  },
+  {
+    "id": 48,
+    "text": "WaitUntilControlIsInvisible"
+  },
+  {
+    "id": 49,
+    "text": "WaitUntilTextToBePresent"
+  },
+  {
+    "id": 50,
+    "text": "VerifyTextBoxValue"
+  },
+  {
+    "id": 51,
+    "text": "GetSelectedComboBoxValue"
+  },
+  {
+    "id": 52,
+    "text": "VerifySelectedComboBoxValue"
+  },
+  {
+    "id": 53,
+    "text": "GetSelectedListBoxValue"
+  },
+  {
+    "id": 54,
+    "text": "VerifySelectedListBoxValue"
+  },
+  {
+    "id": 55,
+    "text": "isSelected"
+  },
+  {
+    "id": 56,
+    "text": "WaitUntilFrameIsAvailableAndSwitchIsDone"
+  },
+  {
+    "id": 57,
+    "text": "VerifyValue"
+  },
+  {
+    "id": 58,
+    "text": "WaitUntilAlertIsPresent"
+  },
+  {
+    "id": 59,
+    "text": "CreateFolder"
+  },
+  {
+    "id": 60,
+    "text": "DeleteFolder"
+  },
+  {
+    "id": 61,
+    "text": "CreateFile"
+  },
+  {
+    "id": 62,
+    "text": "DeleteFile"
+  },
+  {
+    "id": 63,
+    "text": "ReadDataFromExcel"
+  },
+  {
+    "id": 64,
+    "text": "WriteDataToExcel"
+  }
+  
+  ]

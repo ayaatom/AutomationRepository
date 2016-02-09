@@ -1,0 +1,6 @@
+{
+    "envURL": "http://www.snapdeal.com/login",
+    "machine": "localhost",
+    "browser": "chrome",
+    "gridMode": "N"
+}

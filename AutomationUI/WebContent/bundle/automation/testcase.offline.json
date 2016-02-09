@@ -1,0 +1,134 @@
+[
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "User Name",
+    "controlId": "C1",
+    "actionName": "EnterText",
+    "actionId": "A1",
+    "testStepNumber": "TS1",
+    "testStepDescription": "Login Page - Enter Username",
+    "dataSet": [
+      {
+        "key": "userName",
+        "value": "asdf"
+      }
+    ]
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Password",
+    "controlId": "C2",
+    "actionName": "EnterText",
+    "actionId": "A1",
+    "testStepNumber": "TS2",
+    "testStepDescription": "Login Page - Enter Password",
+    "dataSet": [
+      {
+        "key": "password",
+        "value": "asdf"
+      }
+    ]
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Button",
+    "controlId": "C3",
+    "actionName": "Submit",
+    "actionId": "A2",
+    "testStepNumber": "TS3",
+    "testStepDescription": "Login Page - click on Submit button"
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Button",
+    "controlId": "C3",
+    "actionName": "Submit",
+    "actionId": "A2",
+    "testStepNumber": "TS3",
+    "testStepDescription": "Login Page - click on Submit button"
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Button",
+    "controlId": "C3",
+    "actionName": "Submit",
+    "actionId": "A2",
+    "testStepNumber": "TS3",
+    "testStepDescription": "Login Page - click on Submit button"
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Button",
+    "controlId": "C3",
+    "actionName": "Submit",
+    "actionId": "A2",
+    "testStepNumber": "TS3",
+    "testStepDescription": "Login Page - click on Submit button"
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Button",
+    "controlId": "C3",
+    "actionName": "Submit",
+    "actionId": "A2",
+    "testStepNumber": "TS3",
+    "testStepDescription": "Login Page - click on Submit button"
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Button",
+    "controlId": "C3",
+    "actionName": "Submit",
+    "actionId": "A2",
+    "testStepNumber": "TS3",
+    "testStepDescription": "Login Page - click on Submit button"
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Button",
+    "controlId": "C3",
+    "actionName": "Submit",
+    "actionId": "A2",
+    "testStepNumber": "TS3",
+    "testStepDescription": "Login Page - click on Submit button"
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Button",
+    "controlId": "C3",
+    "actionName": "Submit",
+    "actionId": "A2",
+    "testStepNumber": "TS3",
+    "testStepDescription": "Login Page - click on Submit button"
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Button",
+    "controlId": "C3",
+    "actionName": "Submit",
+    "actionId": "A2",
+    "testStepNumber": "TS3",
+    "testStepDescription": "Login Page - click on Submit button"
+  },
+  {
+    "screenName": "Login Page",
+    "screenId": "S1",
+    "controlName": "Button",
+    "controlId": "C3",
+    "actionName": "Submit",
+    "actionId": "A2",
+    "testStepNumber": "TS3",
+    "testStepDescription": "Login Page - click on Submit button"
+  }
+]

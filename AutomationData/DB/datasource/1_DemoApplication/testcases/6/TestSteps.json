@@ -1,0 +1,65 @@
+{
+  "testSteps": [
+    {
+      "controlId": 30,
+      "controlName": "BrowseButton",
+      "objProp": "id->browsebutton",
+      "screenId": 3,
+      "screenName": "PicResizeHomePage",
+      "testStepNumber": 1,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC51",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 31,
+      "controlName": "FileUploadWindow",
+      "objProp": "open.png",
+      "screenId": 3,
+      "screenName": "PicResizeHomePage",
+      "testStepNumber": 2,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC51",
+      "action": {
+        "id": 13,
+        "text": "VerifyControlExists"
+      }
+    },
+    {
+      "controlId": 32,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 3,
+      "screenName": "Generic",
+      "testStepNumber": 3,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC51",
+      "action": {
+        "id": 1,
+        "text": "SetTextOnRegion"
+      },
+      "dataSet": "196,405,20,10->E:\\Project\\Site\\testcase.png"
+    },
+    {
+      "controlId": 33,
+      "controlName": "OpenButton",
+      "objProp": "open.png",
+      "screenId": 3,
+      "screenName": "PicResizeHomePage",
+      "testStepNumber": 4,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC51",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    }
+  ]
+}

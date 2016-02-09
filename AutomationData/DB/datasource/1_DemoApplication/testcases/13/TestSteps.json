@@ -1,0 +1,127 @@
+{
+  "testSteps": [
+    {
+      "controlId": 81,
+      "controlName": "TravelLocation",
+      "objProp": "css->input[value=rdoVisitingUSCanadaNo]",
+      "screenId": 8,
+      "screenName": "LombardTravInsurancePage",
+      "testStepNumber": 1,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC131",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 82,
+      "controlName": "TravelDate",
+      "objProp": "id->ctl00_ContentPlaceHolder1_txtLeavingIndia",
+      "screenId": 8,
+      "screenName": "LombardTravInsurancePage",
+      "testStepNumber": 2,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC131",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 99,
+      "controlName": "Date",
+      "objProp": "innertext->28",
+      "screenId": 8,
+      "screenName": "LombardTravInsurancePage",
+      "testStepNumber": 3,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC131",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+     {
+      "controlId": 99,
+      "controlName": "TripDuration",
+      "objProp": "id->ctl00_ContentPlaceHolder1_txtTripDuration",
+      "screenId": 8,
+      "screenName": "LombardTravInsurancePage",
+      "testStepNumber": 4,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC131",
+      "action": {
+        "id": 2,
+        "text": "Clear Text"
+      }
+    },
+    {
+      "controlId": 83,
+      "controlName": "TripDuration",
+      "objProp": "id->ctl00_ContentPlaceHolder1_txtTripDuration",
+      "screenId": 8,
+      "screenName": "LombardTravInsurancePage",
+      "testStepNumber": 5,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC131",
+      "action": {
+        "id": 1,
+        "text": "Enter Text"
+      },
+      "dataSet": "#TripDuration"
+    },
+    {
+      "controlId": 84,
+      "controlName": "Relationship",
+      "objProp": "id->ctl00_ContentPlaceHolder1_ddRelationIndividual",
+      "screenId": 8,
+      "screenName": "LombardTravInsurancePage",
+      "testStepNumber": 6,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC131",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 84,
+      "controlName": "Relationship",
+      "objProp": "id->ctl00_ContentPlaceHolder1_ddRelationIndividual",
+      "screenId": 8,
+      "screenName": "LombardTravInsurancePage",
+      "testStepNumber": 7,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC131",
+      "action": {
+        "id": 15,
+        "text": "SelectValueFromComboBox"
+      },
+      "dataSet": "#Relationship"
+    },
+    {
+      "controlId": 85,
+      "controlName": "sumInsured",
+      "objProp": "id->ctl00_ContentPlaceHolder1_ddSI",
+      "screenId": 8,
+      "screenName": "LombardTravInsurancePage",
+      "testStepNumber": 8,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC131",
+      "action": {
+        "id": 15,
+        "text": "SelectValueFromComboBox"
+      },
+      "dataSet": "#SumInsured"
+    }
+  ]
+}

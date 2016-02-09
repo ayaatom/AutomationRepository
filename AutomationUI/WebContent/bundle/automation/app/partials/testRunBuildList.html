@@ -1,0 +1,54 @@
+<script type="text/ng-template" id="testRunBuildDialog">
+	<div class="ngdialog-message">
+		<div>
+			<h3 class="page-header">New Test Run Build</h3>
+			<form name="myForm" ng-controller="TestRunBuildCtrl">
+				<label>Name: <input type="text" ng-model="testRunBuildName" name="testRunBuildName" ngRequired="true" ngMinlength=5 ngMaxlength=15 ng-trim=true /></label>
+				<button type="button" class="btn btn-primary btn-xs" ng-click="addTestRunBuild()">Save Test Run Build</button>
+			</form>
+		</div>
+	</div>
+</script>
+
+<div class="container" ng-controller="TestRunBuildCtrl" ng-init="init()">	
+	<div class="form-group has-feedback">
+  		<button ng-click="newTestRunBuild()" class="btn btn-primary btn-xs pull-right">Add TestRun Build</button>
+  		<label class="control-label" for="inputValidation">Filter</label>
+        <input type="text" class="form-control" id="inputValidation" placeholder="Search By Test Run Build Id or Name" ng-model="query">
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+	</div>
+
+ <div class="alert alert-success" ng-show="showSuccessMsg"> {{successMsg}}</div>
+ <div class="alert alert-danger" ng-show="showErrorMsg"> {{errorMsg}}</div>
+ 
+	<table class="table table-responsive">
+		<thead>
+			<tr class="bg-primary"><td>#</td><td>Name</td><td>Application</td><td>Updated By</td><td>Updated Date</td><td>Actions</td></tr>
+		</thead>
+        <tbody><tr dir-paginate="testRunBuild in trBuildData | filter : query| itemsPerPage : 9 ">
+			<td data-title="'#'">
+				<span>{{testRunBuild.testRunBuildId}}</span>
+            </td>
+            <td data-title="'Name'">
+                <span ng-if="!testRunBuild.$edit"><a ng-click="navigateToBuildDetail(testRunBuild)">{{testRunBuild.testRunBuildName}}</a></span>
+                <div ng-if="testRunBuild.$edit"><input class="form-control" type="text" ng-model="testRunBuild.testRunBuildName" /></div>
+            </td>
+            <td data-title="'ApplicationName'">
+                <span>{{testRunBuild.applicationName}}</span>
+            </td>
+			<td data-title="'Created By'">
+                <span>{{testRunBuild.createdBy}}</span>
+            </td>
+            <td data-title="'Created Date'">
+                <span>{{testRunBuild.createdDate | date: 'MM/dd/yyyy'}}</span>
+            </td>
+            <td data-title="'Actions'" width="200">
+                <a ng-if="!testRunBuild.$edit" href="" class="btn btn-default btn-xs" ng-click="testRunBuild.$edit = true">Edit</a>
+                <a ng-if="testRunBuild.$edit" href="" class="btn btn-primary btn-xs" ng-click="updateTestRunBuild(testRunBuild)">Save</a>
+			    <button class="btn btn-primary btn-xs" confirmation-needed="Do you really want to delete?" confirmed-click="removeTestRunBuild(testRunBuild)">Delete</button>
+            </td>
+        </tr></tbody>
+    </table>
+    
+    <dir-pagination-controls></dir-pagination-controls>
+</div>

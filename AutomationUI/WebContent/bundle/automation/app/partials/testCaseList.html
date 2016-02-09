@@ -1,0 +1,55 @@
+<script type="text/ng-template" id="testCaseDialog">
+	<div class="ngdialog-message">
+		<div>
+			<h3 class="page-header">New Test Case</h3>
+			<form name="myForm" ng-controller="TestCaseCtrl">
+				<label>Name: <input type="text" ng-model="testCaseName" name="testCaseName" ngRequired="true" ngMinlength=5 ngMaxlength=15 ng-trim=true /></label>
+				<button type="button" class="btn btn-primary btn-xs" ng-click="addTestCase()">Save Test Case</button>
+			</form>
+		</div>
+	</div>
+</script>
+
+<div class="container" ng-controller="TestCaseCtrl" ng-init="init()">	
+  
+  <div class="form-group has-feedback">
+  		<button ng-click="newTestCase()" class="btn btn-primary btn-xs pull-right">Add TestCase</button>
+                <label class="control-label" for="inputValidation">Filter</label>
+                <input type="text" class="form-control" id="inputValidation" placeholder="Search By Test Case Id or Name" ng-model="query">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+
+ <div class="alert alert-success" ng-show="showSuccessMsg"> {{successMsg}}</div>
+ <div class="alert alert-danger" ng-show="showErrorMsg"> {{errorMsg}}</div>
+ 
+	<table class="table table-responsive">
+		<thead>
+			<tr class="bg-primary"><td>#</td><td>Name</td><td>Application</td><td>Updated By</td><td>Updated Date</td><td>Actions</td></tr>
+		</thead>
+        <tbody><tr dir-paginate="testCase in data | filter : query| itemsPerPage : 9 ">
+			<td data-title="'#'">
+				<span>{{testCase.testCaseId}}</span>
+            </td>
+            <td data-title="'Name'">
+                <span ng-if="!testCase.$edit"><a ng-href="#/testCases/{{testCase.testCaseId}}">{{testCase.testCaseName }}</a></span>
+                <div ng-if="testCase.$edit"><input class="form-control" type="text" ng-model="testCase.testCaseName" /></div>
+            </td>
+            <td data-title="'ApplicationName'">
+                <span>{{testCase.applicationName}}</span>
+            </td>
+			<td data-title="'Created By'">
+                <span>{{testCase.createdBy}}</span>
+            </td>
+            <td data-title="'Created Date'">
+                <span>{{testCase.createdDate | date: 'MM/dd/yyyy'}}</span>
+            </td>
+            <td data-title="'Actions'" width="200">
+                <a ng-if="!testCase.$edit" href="" class="btn btn-default btn-xs" ng-click="testCase.$edit = true">Edit</a>
+                <a ng-if="testCase.$edit" href="" class="btn btn-primary btn-xs" ng-click="updateTestCase(testCase)">Save</a>
+			    <button class="btn btn-primary btn-xs" confirmation-needed="Do you really want to delete?" confirmed-click="removeTestCase(testCase)">Delete</button>
+            </td>
+        </tr></tbody>
+    </table>
+    
+    <dir-pagination-controls></dir-pagination-controls>
+</div>

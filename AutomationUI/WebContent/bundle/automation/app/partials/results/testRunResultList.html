@@ -1,0 +1,38 @@
+<div class="container" ng-controller="TestRunResultCtrl" ng-init="init()">	
+	
+	 <div class="form-group has-feedback">
+	         <label class="control-label" for="inputValidation">Filter </label>
+	         <input type="text" class="form-control" id="testRunResultFilter" placeholder="Search By Test Run No or Name" ng-model="query">
+	         <span class="glyphicon glyphicon-search form-control-feedback"></span>
+	 </div>
+      
+	<table class="table table-responsive">
+		<thead>
+			<tr class="bg-primary"><td>#</td><td>Test Run Name</td><td>Result</td><td>Duration (ms)</td></tr>
+		</thead>
+        <tbody><tr dir-paginate="testRunResult in data | filter : query| itemsPerPage : 9 ">
+			<td data-title="'Build No#'">
+                <span ng-if="testRunResult.iteration">
+                	<!-- <a ng-href="#/buildExecIterationResults/{{buildId}}/{{testRunResult.testRunId}}/{{testRunResult.iteration}}">
+                	{{testRunResult.testRunId}}</a> -->
+                	<a href="" ng-click="viewTestRunDetailIterationResults(testRunResult)">{{testRunResult.testRunId}}</a>
+                </span>
+                <span ng-if="!testRunResult.iteration">
+                <a href="" ng-click="viewTestRunDetailResults(testRunResult)">{{testRunResult.testRunId}}</a>
+                <!-- <a ng-href="#/buildExecResults/{{buildId}}/{{testRunResult.testRunId}}">{{testRunResult.testRunId}}</a> --></span>
+            </td>
+            <td data-title="'Machine Name'">
+                <span>{{testRunResult.testRunName}}</span>
+            </td>
+            <td data-title="'Test Run Result'">
+                <span>{{testRunResult.result}}</span>
+            </td>
+            <td data-title="'Duration (ms)'" width="200">
+                <span>{{testRunResult.duration}}</span>
+            </td>
+        </tr>
+    </table>
+
+	<dir-pagination-controls></dir-pagination-controls>
+	
+</div>

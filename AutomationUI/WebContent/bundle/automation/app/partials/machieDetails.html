@@ -1,0 +1,61 @@
+<script type="text/ng-template" id="machineDialog">
+	<div class="ngdialog-message">
+		<div>
+			<h3 class="page-header">New Machine</h3>
+			<form name="myForm" ng-controller="MachineCtrl">
+				<label>Name: <input type="text" ng-model="machineName" name="machineName" ngRequired="true" ngMinlength=5 ngMaxlength=15 ng-trim=true /></label>
+				<label>Host: <input type="text" ng-model="machineHost" name="machineHost" ngRequired="true" ngMinlength=5 ngMaxlength=15 ng-trim=true /></label>
+				<label>Port: <input type="text" ng-model="machinePort" name="machinePort" ngRequired="true" ngMinlength=5 ngMaxlength=15 ng-trim=true /></label>
+				<label>Description: <input type="text" ng-model="machineDesc" name="machineDesc" ngRequired="true" ngMinlength=5 ngMaxlength=25 ng-trim=true /></label>
+				<button type="button" class="btn btn-primary btn-xs" ng-click="addMachine()">Save Machine</button>
+			</form>
+		</div>
+	</div>
+</script>
+
+<div class="container" ng-controller="MachineCtrl" ng-init="init()">	
+  
+  <div class="form-group has-feedback">
+  		<button ng-click="newMachine()" class="btn btn-primary btn-xs pull-right">Add Machine</button>
+                <label class="control-label" for="inputValidation">Filter</label>
+                <input type="text" class="form-control" id="inputValidation" placeholder="Search By Machine" ng-model="query">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+
+ <div class="alert alert-success" ng-show="showSuccessMsg"> {{successMsg}}</div>
+ <div class="alert alert-danger" ng-show="showErrorMsg"> {{errorMsg}}</div>
+ 
+	<table class="table table-responsive">
+		<thead>
+			<tr class="bg-primary"><td>#</td><td>Name</td><td>Host</td><td>Port</td><td>Description</td><td>Actions</td></tr>
+		</thead>
+        <tbody><tr dir-paginate="machine in data | filter : query| itemsPerPage : 9 ">
+			<td data-title="'#'">
+				<span>{{machine.machineId}}</span>
+            </td>
+            <td data-title="'Name'">
+                <span ng-if="!machine.$edit">{{machine.machineName}}</span>
+                <div ng-if="machine.$edit"><input class="form-control" type="text" ng-model="machine.machineName" /></div>
+            </td>
+            <td data-title="'Host'">
+                <span ng-if="!machine.$edit">{{machine.machineHost}}</span>
+                 <div ng-if="machine.$edit"><input class="form-control" type="text" ng-model="machine.machineHost" /></div>
+            </td>
+			<td data-title="'Port'">
+                <span ng-if="!machine.$edit">{{machine.machinePort}}</span>
+                <div ng-if="machine.$edit"><input class="form-control" type="text" ng-model="machine.machinePort" /></div>
+            </td>
+            <td data-title="'Description'">
+                <span ng-if="!machine.$edit">{{machine.machineDesc}}</span>
+                <div ng-if="machine.$edit"><input class="form-control" type="text" ng-model="machine.machineDesc" /></div>
+            </td>
+            <td data-title="'Actions'" width="200">
+                <a ng-if="!machine.$edit" href="" class="btn btn-default btn-xs" ng-click="machine.$edit = true">Edit</a>
+                <a ng-if="machine.$edit" href="" class="btn btn-primary btn-xs" ng-click="updateMachine(machine)">Save</a>
+			    <button class="btn btn-primary btn-xs" confirmation-needed="Do you really want to delete?" confirmed-click="removeMachine(machine)">Delete</button>
+            </td>
+        </tr></tbody>
+    </table>
+    
+    <dir-pagination-controls></dir-pagination-controls>
+</div>

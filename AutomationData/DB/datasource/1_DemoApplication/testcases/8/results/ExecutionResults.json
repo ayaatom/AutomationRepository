@@ -1,0 +1,1 @@
+[{"testStepNumber":"20","screen":"KBHomePage","control":"closeButton","screenShotPath":"","stepResult":"Passed","stepDesc":"Successfully waited for closeButton on KBHomePage","duration":9183},{"testStepNumber":"21","screen":"KBHomePage","control":"closeButton","screenShotPath":"","stepResult":"Passed","stepDesc":"Successfully clicked closeButton on KBHomePage","duration":2020}]

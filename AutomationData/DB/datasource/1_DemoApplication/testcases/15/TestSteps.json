@@ -1,0 +1,387 @@
+{
+  "testSteps": [
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 1,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 21,
+        "text": "WaitForAjax"
+      }
+    },
+    {
+      "controlId": 100,
+      "controlName": "BigBoardView",
+      "objProp": "id->BigBoardViewLink",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 2,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      }
+    },
+    {
+      "controlId": 100,
+      "controlName": "BigBoardView",
+      "objProp": "id->BigBoardViewLink",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 3,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 4,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 21,
+        "text": "WaitForAjax"
+      }
+    },
+    {
+      "controlId": 101,
+      "controlName": "ColumnField",
+      "objProp": "id->ColumnField",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 5,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      }
+    },
+    {
+      "controlId": 101,
+      "controlName": "ColumnField",
+      "objProp": "id->ColumnField",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 6,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 7,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 14,
+        "text": "KeyPressAction"
+      },
+      "dataSet": "{DOWN}&&{DOWN}&&{RIGHT}&&{ENTER}"
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 8,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 21,
+        "text": "WaitForAjax"
+      }
+    },
+    {
+      "controlId": 102,
+      "controlName": "rowField",
+      "objProp": "id->RowField",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 9,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      }
+    },
+    {
+      "controlId": 102,
+      "controlName": "rowField",
+      "objProp": "id->RowField",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 10,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 11,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 14,
+        "text": "KeyPressAction"
+      },
+      "dataSet": "{DOWN}&&{DOWN}&&{RIGHT}&&{DOWN}&&{ENTER}"
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 12,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 21,
+        "text": "WaitForAjax"
+      }
+    },
+    {
+      "controlId": 103,
+      "controlName": "publishView",
+      "objProp": "id->PublishViewButton",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 13,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 104,
+      "controlName": "publishViewTextBox",
+      "objProp": "id->PublishViewTextBox",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 14,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      }
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 15,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 18,
+        "text": "GenerateRandomNumber"
+      },
+      "dataSet": "100->#bbv"
+    },
+    {
+      "controlId": 59,
+      "controlName": "String",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 16,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 19,
+        "text": "Concatenate"
+      },
+      "dataSet": "bigb,#bbv->#bname"
+    },
+    {
+      "controlId": 104,
+      "controlName": "publishViewTextBox",
+      "objProp": "id->PublishViewTextBox",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 17,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 1,
+        "text": "Enter Text"
+      },
+      "dataSet": "#bname"
+    },
+    {
+      "controlId": 105,
+      "controlName": "publish",
+      "objProp": "css->button[data-action=publish]",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 18,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      }
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 19,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 22,
+        "text": "Wait"
+      },
+      "dataSet": "2"
+    },
+    {
+      "controlId": 105,
+      "controlName": "publish",
+      "objProp": "css->button[data-action=publish]",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 20,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 21,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 22,
+        "text": "Wait"
+      },
+      "dataSet": "10"
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 22,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 28,
+        "text": "ScrollWindow"
+      },
+      "dataSet": "UP,50"
+    },
+    {
+      "controlId": 106,
+      "controlName": "close",
+      "objProp": "xpath->//span[text()='Close'],index->8",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 23,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 30,
+        "text": "MoveMouseToElement"
+      }
+    },
+    {
+      "controlId": 106,
+      "controlName": "close",
+      "objProp": "xpath->//span[text()='Close'],index->8",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 24,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 9,
+        "text": "DoubleClick"
+      }
+    },
+    {
+      "controlId": 107,
+      "controlName": "BigBoardIcon",
+      "objProp": "css->span[class='big-board']",
+      "screenId": 10,
+      "screenName": "KBBigBoard",
+      "testStepNumber": 25,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC151",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      }
+    }
+  ]
+}

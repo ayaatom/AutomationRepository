@@ -1,0 +1,37 @@
+{
+  "testRunDetail": [
+    {
+      "testCaseId": "TC111",
+      "testCaseName": "Lombard_TravIns_Get_Quote",
+      "testRunDetailId": 1,
+      "browserMode":"NO",
+      "externalData":"NO",
+      "dataSource":"",
+      "testRunId": "TR31",
+      "applicationId": "1",
+      "applicationName": "DemoApplication"
+    },
+    {
+      "testCaseId": "TC121",
+      "testCaseName": "Lombard_Select_InsType",
+      "testRunDetailId": 2,
+      "browserMode":"NO",
+      "externalData":"NO",
+      "dataSource":"",
+      "testRunId": "TR31",
+      "applicationId": "1",
+      "applicationName": "DemoApplication"
+    },
+    {
+      "testCaseId": "TC131",
+      "testCaseName": "Lombard_Fill_Ins_Form",
+      "testRunDetailId": 3,
+      "browserMode":"NO",
+      "externalData":"YES",
+      "dataSource":"E://Data//Data.xls->Sheet1->TravelData",
+      "testRunId": "TR31",
+      "applicationId": "1",
+      "applicationName": "DemoApplication"
+    }
+  ]
+}

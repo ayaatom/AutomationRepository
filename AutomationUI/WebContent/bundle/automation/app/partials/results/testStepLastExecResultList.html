@@ -1,0 +1,58 @@
+<script type="text/ng-template" id="firstDialogId">
+<div id="resizeonly"><div>
+<img src={{ngDialogData}} class="img-rounded" width="420" height="400"/>
+</div></div>
+</script>
+
+<div class="container" ng-controller="TestStepLastExecResultCtrl" ng-init="init()">	
+	
+	 <div class="form-group has-feedback">
+	 		 <!-- <label class="control-label">{{testCaseName}}</label> -->
+	         <label class="control-label" for="inputValidation">Filter </label>
+	         <input type="text" class="form-control" id="testStepFilter" placeholder="Search By Test Step No or Name" ng-model="query">
+	         <span class="glyphicon glyphicon-search form-control-feedback"></span>
+	 </div>
+      
+	<table class="table table-responsive">
+	<thead>
+			<tr class="bg-primary"><td>#</td><td>Screen</td><td>Control</td><td>Action</td><td>Data Set</td><td>Screen Shot</td><td>Step Result</td><td>Description</td><td>Duration (ms)</td></tr>
+		</thead>
+        <tbody><tr dir-paginate="testStepResult in data | filter : query| itemsPerPage : 9 ">
+			<td data-title="'#'">
+                <span>{{testStepResult.testStepNumber}}</span>
+            </td>
+            <td data-title="'Screen'">
+                <span>{{testStepResult.screen}}</span>
+            </td>
+            <td data-title="'Control'">
+                <span>{{testStepResult.control}}</span>
+            </td>
+            <td data-title="'Action'">
+                <span>{{testStepResult.action}}</span>
+            </td>
+            <td data-title="'Data Set'">
+                <span>{{testStepResult.data}}</span>
+            </td>
+            <td data-title="'Screen Shot'" >
+                 <span ng-if="(testStepResult.screenShotPath && testStepResult.screenShotPath.indexOf('png')) !== -1">
+                 	<img ng-src="images/photo.png" ng-click="viewScreenShot(testStepResult.screenShotPath)"/>
+                 </span>
+                <!-- <span ng-if="(testStepResult.screenShotPath && testStepResult.screenShotPath.indexOf('mkv'))">
+                	<img ng-src="images/video.png" ng-click="viewScreenShot(testStepResult.screenShotPath)"/>
+                </span> -->
+            </td>
+			<td data-title="'Step Result'"  >
+                <span>{{testStepResult.stepResult}}</span>
+            </td>
+            <td data-title="'Description'" >
+                <span>{{testStepResult.description}}</span>
+            </td>
+            <td data-title="'Duration (ms)'" >
+                <span>{{testStepResult.duration}}</span>
+            </td>
+        </tr>
+    </table>
+
+	<dir-pagination-controls></dir-pagination-controls>
+	
+</div>

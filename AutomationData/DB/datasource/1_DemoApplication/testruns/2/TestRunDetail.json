@@ -1,0 +1,22 @@
+{
+  "testRunDetail": [
+    {
+      "testCaseId": "TC01",
+      "testCaseName": "Yahoo_Login_Test",
+      "testRunDetailId": 1,
+      "browserMode":"NO",
+      "testRunId": "TR11",
+      "applicationId": "1",
+      "applicationName": "DemoApplication"
+    },
+    {
+      "testCaseId": "TC61",
+      "testCaseName": "Yahoo_Forgot_Details_Test",
+      "testRunDetailId": 2,
+       "browserMode":"NO",
+      "testRunId": "TR11",
+      "applicationId": "1",
+      "applicationName": "DemoApplication"
+    }
+  ]
+}

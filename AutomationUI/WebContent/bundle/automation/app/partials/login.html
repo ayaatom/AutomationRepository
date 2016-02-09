@@ -1,0 +1,46 @@
+<script type="text/ng-template" id="applicationDialog">
+	<div class="ngdialog-message">
+		<div>
+			<h3 class="page-header">Select Application</h3>
+			<form name="appForm" ng-controller="LoginCtrl">
+				<label>Application:</label>
+				<div>
+					<select ng-model='selectedApplication'  ng-options='app.name for app in ngDialogData'></select>
+      			</div>
+				<button type="button" class="btn btn-primary btn-xs" ng-click="proceedLogin()">Proceed Login</button>
+			</form>
+		</div>
+	</div>
+</script>
+
+<div class="container" ng-controller="LoginCtrl">
+<div class="row">  
+ <div class="col-sm-6">
+    
+</div>  
+<div class="col-sm-6">
+    <!-- FORM ============ -->
+  
+    <form name="userForm" ng-submit="submitForm()" >
+		<span style="color:red" ng-class="{ 'has-error' : userForm.$invalid}">{{errors.login}}</span>
+        <!-- USERNAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && userForm.username.$dirty && userForm.username.$error.required }">
+            <label>Username</label>
+            <input type="text" name="username" class="form-control" ng-model="username" required >
+            <span ng-show="userForm.username.$dirty && userForm.username.$error.required" class="help-block">Username is required</span>
+        </div>
+        
+        <div class="form-group" ng-class="{ 'has-error': userForm.password.$invalid && userForm.password.$dirty && userForm.password.$error.required }">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" ng-model="password" required />
+            <span ng-show="userForm.password.$dirty && userForm.password.$error.required" class="help-block">Password is required</span>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" >Submit</button>
+        
+    </form>
+  </div>
+  
+    
+</div>
+</div>

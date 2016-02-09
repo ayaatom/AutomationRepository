@@ -1,0 +1,51 @@
+<script type="text/ng-template" id="firstDialogId">
+<div id="resizeonly"><div>
+
+<video ng-src="{{ngDialogData}}"  class="img-responsive" controls preload="auto" style="border: 1px solid black">
+        </video>
+
+</div></div>
+</script>
+
+
+<div class="container" ng-controller="TestRunDetailResultCtrl" ng-init="init()">	
+	
+	 <div class="form-group has-feedback">
+	         <label class="control-label" for="inputValidation">Filter </label>
+	         <input type="text" class="form-control" id="testRunResultFilter" placeholder="Search By Test Case Name or Result" ng-model="query">
+	         <span class="glyphicon glyphicon-search form-control-feedback"></span>
+	 </div>
+      
+	<table class="table table-responsive">
+	<thead>
+			<tr class="bg-primary"><td>#</td><td>Test Case Name</td><td>Status</td><td>Video</td><td>Duration (ms)</td></tr>
+		</thead>
+        <tbody><tr dir-paginate="testRunDetailResult in data | filter : query| itemsPerPage : 9 ">
+			<td data-title="'#'">
+                <span><a href="" ng-click="viewTestStepResults(testRunDetailResult)">
+                {{testRunDetailResult.testCaseId}}</a></span>
+                <!-- <span ng-if="testRunDetailResult.iteration"><a ng-href="#/buildExecIterationResults/{{buildId}}/{{testRunId}}/{{testRunDetailResult.testCaseId}}/{{testRunDetailResult.iteration}}">
+                {{testRunDetailResult.testCaseId}}</a></span>
+                <span ng-if="!testRunDetailResult.iteration"><a ng-href="#/buildExecResults/{{buildId}}/{{testRunId}}/{{testRunDetailResult.testCaseId}}">{{testRunDetailResult.testCaseId}}</a></span> -->
+                
+            </td>
+            <td data-title="'Test Case Name'">
+                <span>{{testRunDetailResult.testCaseName}}</span>
+            </td>
+            <td data-title="'Status'">
+                <span>{{testRunDetailResult.result}}</span>
+            </td>
+            <td data-title="'Video'" >
+                 <span ng-if="(testRunDetailResult.videoPath && testRunDetailResult.videoPath.indexOf('mp4')) !== -1">
+                 <a href="" ng-click="viewVideo(testRunDetailResult.videoPath)"><img src="images/video.png" title="Video"/></a>
+                 </span>
+            </td>
+            <td data-title="'Duration (ms)'">
+                <span>{{testRunDetailResult.duration}}</span>
+            </td>
+         </tr>
+    </table>
+
+	<dir-pagination-controls></dir-pagination-controls>
+	
+</div>

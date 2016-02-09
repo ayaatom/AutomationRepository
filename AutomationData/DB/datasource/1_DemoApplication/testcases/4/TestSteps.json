@@ -1,0 +1,100 @@
+{
+  "testSteps": [
+    {
+      "screenId": 1,
+      "screenName": "Generic",
+      "controlId": 1.1,
+      "controlName": "Generic",
+      "objProp":"",
+      "testStepNumber": 1,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC04",
+      "action": {
+        "id": 1,
+        "text": "ActivateWindow"
+      },
+      "dataSet": "vpnconnect.png"
+    },
+    {
+      "screenId": 1,
+      "screenName": "VPN",
+      "controlId": 1.1,
+      "controlName": "vpnconnect",
+      "objProp":"vpnconnect.png",
+      "testStepNumber": 2,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC04",
+      "action": {
+        "id": 1,
+        "text": "Click"
+      },
+      "dataSet": ""
+    },
+    {
+      "screenId": 1,
+      "screenName": "VPN",
+      "controlId": 1.2,
+      "controlName": "vpnlogin",
+      "objProp":"vpnlogin.png",
+      "testStepNumber": 3,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC04",
+      "action": {
+        "id": 1,
+        "text": "VerifyControlExists"
+      },
+      "dataSet": ""
+    },
+    {
+      "screenId": 1,
+      "screenName": "VPN",
+      "controlId": 1.3,
+      "controlName": "vpnusername",
+      "objProp":"vpnusername.png",
+      "testStepNumber": 4,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC04",
+      "action": {
+        "id": 1,
+        "text": "SetText"
+      },
+      "dataSet": "xyz"
+    },
+     {
+      "screenId": 1,
+      "screenName": "VPN",
+      "controlId": 1.3,
+      "controlName": "vpnpassword",
+      "objProp":"vpnusername.png",
+      "testStepNumber": 5,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC04",
+      "action": {
+        "id": 1,
+        "text": "SetText"
+      },
+      "dataSet": "test"
+    },
+    {
+      "screenId": 1,
+      "screenName": "VPN",
+      "controlId": 1.4,
+      "controlName": "cancel",
+      "objProp":"cancel.png",
+      "testStepNumber": 6,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC04",
+      "action": {
+        "id": 1,
+        "text": "Click"
+      },
+      "dataSet": ""
+    }
+  ]
+}

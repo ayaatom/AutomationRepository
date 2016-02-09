@@ -1,0 +1,204 @@
+{
+  "testSteps": [
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 1,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 21,
+        "text": "WaitForAjax"
+      }
+    },
+    {
+      "controlId": 90,
+      "controlName": "AddNewEntry",
+      "objProp": "id->AddNewEntry",
+      "screenId": 9,
+      "screenName": "KBAddNewEntry",
+      "testStepNumber": 2,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      }
+    },
+    {
+      "controlId": 90,
+      "controlName": "AddNewEntry",
+      "objProp": "id->AddNewEntry",
+      "screenId": 9,
+      "screenName": "KBAddNewEntry",
+      "testStepNumber": 3,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 91,
+      "controlName": "EntryTitle",
+      "objProp": "id->EntryNameInput_Value",
+      "screenId": 9,
+      "screenName": "KBAddNewEntry",
+      "testStepNumber": 4,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 6,
+        "text": "WaitForControl"
+      }
+    },
+    {
+      "controlId": 91,
+      "controlName": "EntryTitle",
+      "objProp": "id->EntryNameInput_Value",
+      "screenId": 9,
+      "screenName": "KBAddNewEntry",
+      "testStepNumber": 5,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 1,
+        "text": "Enter Text"
+      },
+      "dataSet": "#EntryTitle"
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 6,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 1,
+        "text": "Wait"
+      },
+      "dataSet": "1"
+    },
+    {
+      "controlId": 92,
+      "controlName": "Tag1Title",
+      "objProp": "id->TagInputs_0__Value",
+      "screenId": 9,
+      "screenName": "KBAddNewEntry",
+      "testStepNumber": 7,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 1,
+        "text": "Enter Text"
+      },
+      "dataSet": "#Tag1Title"
+    },
+     {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 8,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 1,
+        "text": "Wait"
+      },
+      "dataSet": "1"
+    },
+    {
+      "controlId": 93,
+      "controlName": "Tag2Title",
+      "objProp": "id->TagInputs_1__Value",
+      "screenId": 9,
+      "screenName": "KBAddNewEntry",
+      "testStepNumber": 9,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 1,
+        "text": "Enter Text"
+      },
+      "dataSet": "#Tag2Title"
+    },
+    {
+      "controlId": 94,
+      "controlName": "Description",
+      "objProp": "id->Description,index->1",
+      "screenId": 9,
+      "screenName": "KBAddNewEntry",
+      "testStepNumber": 10,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 1,
+        "text": "Enter Text"
+      },
+      "dataSet": "#Description"
+    },
+    {
+      "controlId": 95,
+      "controlName": "SaveChanges",
+      "objProp": "id->btnEditEntrySaveChanges",
+      "screenId": 9,
+      "screenName": "KBAddNewEntry",
+      "testStepNumber": 11,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 2,
+        "text": "Click"
+      }
+    },
+    {
+      "controlId": 58,
+      "controlName": "Generic",
+      "objProp": "",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 12,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 21,
+        "text": "WaitForAjax"
+      }
+    },
+    {
+      "controlId": 52,
+      "controlName": "Browser",
+      "screenId": 5,
+      "screenName": "Generic",
+      "testStepNumber": 13,
+      "applicationId": "1",
+      "applicationName": "DemoApplication",
+      "testCaseId": "TC141",
+      "action": {
+        "id": 23,
+        "text": "NavigateBack"
+      }
+    }
+  ]
+}

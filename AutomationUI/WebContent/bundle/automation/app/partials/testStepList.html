@@ -1,0 +1,118 @@
+<script type="text/ng-template" id="nodes_renderer.html">
+         <div ui-tree-handle data-nodrag class="tree-node tree-node-content">
+            <a class="btn btn-success btn-xs" data-nodrag ng-click="toggle(this)">
+			<span class="glyphicon" ng-class="{'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed}"></span>
+			</a>
+			<input type="checkbox" ng-disabled="node.type === 'SCREEN'" ng-click="printParent($event);" ng-model="node.isChecked" ng-checked="node.isChecked"/>
+            {{node.title}}
+          </div>
+		<ol ng-model="node.nodes" ng-class="{hidden: collapsed}" style="list-style-type: none;">
+            <li ng-repeat="node in node.nodes" data-collapsed="true" ui-tree-node ng-include="'nodes_renderer.html'"></li>
+          </ol>
+</script>
+
+<script type="text/ng-template" id="firstDialogId">
+	<div class="ngdialog-message">
+	<div>
+		<h1 class="page-header">Screen Control</h1>
+		<div ui-tree id="tree-root" class="screenControldialog">
+	          <ol ui-tree-nodes="" ng-model="ngDialogData.data" style="list-style-type: none;">
+	    	        <li ng-repeat="node in ngDialogData.data"  data-collapsed="true" ui-tree-node ng-include="'nodes_renderer.html'" ng-show="visible(node)"></li>
+    	      </ol>
+        </div>
+    <div class="ngdialog-buttons">
+		<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="addTestStep(ngDialogData.index)">Save Test Step</button>
+	</div>
+</div></div>
+</script>
+
+
+<script type="text/ng-template" id="executeDialog">
+	<div class="ngdialog-message">
+		<div>
+			<h3 class="page-header">Execution Details</h3>
+			<form name="execForm" ng-controller="TestStepCtrl">
+      			<label class="control-label">Settings Type</label>
+      			<div>
+					<select ng-model='selectedField'  ng-options='field.header for field in ngDialogData.fields'></select>
+      			</div>
+	  			<label class="control-label">Environment</label>
+      			<div>
+					<select ng-model='selectedEnv' ng-options='selField.environment for selField in selectedField.applicationdetailfields'></select>
+      			</div>
+				<label class="control-label">Machine</label>
+      			<div>
+					<select ng-model='selectedMachine' ng-options='machine.machineName for machine in machineDetails'></select>
+      			</div>
+				<label class="control-label">Browser</label>
+				<div>
+					<select ng-model='selectedBrowser' ng-options='browser.text for browser in browsers'></select>
+					<button ng-click="startExecution()" class="btn btn-primary btn-xs pull-right">Start Execution</button>
+      			</div>
+			</form>
+		</div>
+	</div>
+</script>
+
+
+<div class="container" ng-controller="TestStepCtrl" ng-init="init()">	
+	<!-- Test -->
+	 <div class="form-group has-feedback">
+		<button ng-click="openDefault()" class="btn btn-primary btn-xs pull-right">Add TestStep</button>
+		<button ng-click="executeTest()" class="btn btn-primary btn-xs pull-right">Execute Test</button>
+		<a ng-href="#/testCases/{{testCaseID}}/testStepLastExecResults" class="btn btn-primary btn-xs pull-right">Execution Result</a>
+	         <label class="control-label" for="inputValidation">Filter </label>
+	         <input type="text" class="form-control" id="testStepFilter" placeholder="Search By Test Step No or Name" ng-model="query">
+	         <span class="glyphicon glyphicon-search form-control-feedback"></span>
+	    </div>
+      
+       <div class="alert alert-success" ng-show="showSuccessMsg"> {{successMsg}}</div>
+ <div class="alert alert-danger" ng-show="showErrorMsg"> {{errorMsg}}</div>
+ <spinner name="mySpinner" register="true" show="true" imgSrc="images/gears.png"></spinner>
+	<table class="table table-responsive">
+	<thead>
+			<tr class="bg-primary"><td>#</td><td>Screen</td><td>Control</td><td>Action</td><td>Data Set</td><td>Actions</td></tr>
+		</thead>
+        <tbody><tr dir-paginate="testStep in data | filter : query| itemsPerPage : 9">
+			<td data-title="'#'">
+                <span>{{testStep.testStepNumber}}</span>
+            </td>
+            <td data-title="'Screen'">
+                <span>{{testStep.screenName}}</span>
+            </td>
+            <td data-title="'Control'">
+                <span>{{testStep.controlName}}</span>
+            </td>
+            <td data-title="'Action'" width="200">
+                <span ng-if="!testStep.$edit">{{getActionName(testStep.action.id)}}</span>
+                <div ng-if="testStep.$edit">
+				<div ng-repeat="screenCtrlType in screenCtrlTypes | filter : {id:testStep.objPropType} : fieldComparator" >
+						<!--<select name="mySelect" id="mySelect" ng-model="testStep.action">
+      						<option ng-selected="{{action.id == testStep.action}}" ng-repeat="action in screenCtrlType.actions" value="{{action.id}}">{{getActionName(action.id)}}</option>
+						</select>-->
+						<select name="mySelect" id="mySelect" ng-model="testStep.action.id" 
+							ng-options="action.id as getActionName(action.id) for action in screenCtrlType.actions" 
+							ng-selected="{{action.id == testStep.action.id}}" ng-required="true">
+						</select>
+				</div>				
+				</div>
+            </td>
+			<td data-title="'Data Set'" width="200">
+                <span ng-if="!testStep.$edit">{{testStep.dataSet}}</span>
+				<div ng-if="testStep.$edit"><input class="form-control" type="text" ng-model="testStep.dataSet" /></div>
+            </td>
+            <td data-title="'Actions'" width="200">
+                <a ng-if="!testStep.$edit" href=""  ng-click="testStep.$edit = true"><img src="images/edit.png" title="Edit"/></a>
+                <a ng-if="testStep.$edit" href=""  ng-click="updateTestStep(testStep)"><img src="images/save.png" title="Save"/></a>
+				<button  confirmation-needed="Do you really want to delete?" confirmed-click="removeTestStep(testStep)"><img src="images/delete.png" title="Delete"/></button>
+                <a href="" ng-click="moveUpTestStep(testStep,$index)"><img src="images/up.png" title="Move Up"/></a>
+                <a href="" ng-click="moveDownTestStep(testStep,$index)"><img src="images/down.png" title="Move Down"/></a>
+                <a ng-click="insertTestStep(testStep,$index)"><img src="images/add.png" title="Insert"/></a>
+            </td>
+        </tr>
+    </table>
+
+	<dir-pagination-controls></dir-pagination-controls>
+	<!-- <button ng-click="saveTestStepsObj()" class="btn btn-primary btn-xs pull-right" style="background-color:#FE2E2E;border-color:#FE2E2E ">Save</button> -->
+		
+</div>

@@ -1,0 +1,50 @@
+<div class="container" ng-controller="TestBuildExecResultCtrl" ng-init="init()">	
+	
+	 <div class="form-group has-feedback">
+	         <label class="control-label" for="inputValidation">Filter </label>
+	         <input type="text" class="form-control" id="testBuildExecResultFilter" placeholder="Search By Test Build Exec No or Name" ng-model="query">
+	         <span class="glyphicon glyphicon-search form-control-feedback"></span>
+	 </div>
+      
+	<table class="table table-responsive">
+		<thead>
+			<tr class="bg-primary"><td>Build No#</td><td>Name</td><td>Machine Name</td><td>Start Time</td><!-- <td>End Time</td> --><td>Build Result</td><td>Flows Passed</td><td>Flows Failed</td><td>Duration (ms)</td></tr>
+		</thead>
+        <tbody><tr dir-paginate="testBuildExecResult in data | filter : query| itemsPerPage : 9 ">
+			<td data-title="'Build No#'">
+               <!--  <span><a ng-href="#/buildExecResults/{{testBuildExecResult.buildId}}">{{testBuildExecResult.buildId}}</a></span> -->
+                <span><a href="" ng-click="viewTestRunResults(testBuildExecResult)">{{testBuildExecResult.buildId}}</a></span>
+            </td>
+<!--             <td data-title="'Test Run#'"> -->
+<!--                 <span><a ng-href="#/buildExecResults/{{testBuildExecResult.buildId}}/{{testBuildExecResult.resultTestRun.testRunId}}">{{testBuildExecResult.resultTestRun.testRunId}}</a></span> -->
+<!--             </td> -->
+			<td data-title="'Name'">
+                <span>{{testBuildExecResult.buildName}}</span>
+            </td>
+            <td data-title="'Machine Name'">
+                <span>{{testBuildExecResult.machineName}}</span>
+            </td>
+            <td data-title="'Start Time'">
+                <span>{{testBuildExecResult.startTime}}</span>
+            </td>
+           <!--  <td data-title="'End Time'">
+                <span>{{testBuildExecResult.endTime}}</span>
+            </td> -->
+            <td data-title="'Build Result'">
+                <span>{{testBuildExecResult.buildResult}}</span>
+            </td>
+            <td data-title="'Flows Passed'">
+                <span>{{testBuildExecResult.passCounter}}</span>
+            </td>
+            <td data-title="'Flows Failed'">
+                <span>{{testBuildExecResult.failCounter}}</span>
+            </td>
+            <td data-title="'Duration (ms)'" width="200">
+                <span>{{testBuildExecResult.duration}}</span>
+            </td>
+        </tr>
+    </table>
+
+	<dir-pagination-controls></dir-pagination-controls>
+	
+</div>
