@@ -23,6 +23,7 @@ Create the issues and enhancement requests under the Issues section. Based on th
 <h4>Notes</h4>
 <p>
 Release and maintenance activities on ATOM OS front has been slow due to the developements on PRO version. But the support for OS version would be continued through the Issues section and will also be supported through the PRO version support (coming soon).
+Contact us at support@ayavant.com for enterprise enquiries
 </p>
 </body>
 </html>
